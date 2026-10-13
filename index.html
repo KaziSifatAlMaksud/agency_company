@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SyncReach | B2B Outbound Lead Generation Agency</title>
+  <meta name="description" content="We help B2B businesses build qualified sales pipelines through cold email and LinkedIn outreach, AI personalisation, lead qualification and appointment setting.">
+
+  <!-- Adds .js class so reveal animations only hide content when JavaScript is running -->
+  <script>document.documentElement.classList.add('js');</script>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 + Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+
+  <!-- Custom styles -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Scroll progress bar -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav class="navbar navbar-expand-lg fixed-top sr-nav" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand sr-brand" href="#top">
+        <svg width="32" height="32" viewBox="0 0 32 32" aria-hidden="true">
+          <defs>
+            <linearGradient id="logoGrad" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#3b82f6"/><stop offset="1" stop-color="#1d4ed8"/>
+            </linearGradient>
+          </defs>
+          <rect width="32" height="32" rx="9" fill="url(#logoGrad)"/>
+          <path d="M22 8.5H13.5a4 4 0 0 0 0 8h5a4 4 0 0 1 0 8H10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>SyncReach</span>
+      </a>
+
+      <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu" aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="bi bi-list fs-2"></i>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav nav-pill mx-auto">
+          <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+          <li class="nav-item"><a class="nav-link" href="#process">Results</a></li>
+          <li class="nav-item"><a class="nav-link" href="#reviews">Reviews</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+          <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+        <a href="#contact" class="btn btn-sr btn-sm px-3 py-2">Book a demo</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="top">
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero">
+      <div class="hero-blob blob-a" data-speed="0.12"></div>
+      <div class="hero-blob blob-b" data-speed="-0.08"></div>
+
+      <div class="container position-relative">
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <span class="eyebrow hero-in" style="--i:0"><i class="dot"></i> #1 B2B Outbound Lead Generation Agency</span>
+
+            <h1 class="hero-title hero-in" style="--i:1">
+              We bring <span class="grad-text hl">the leads.
+                <svg class="hl-line" viewBox="0 0 300 12" preserveAspectRatio="none" aria-hidden="true"><path d="M2 8 C 70 2, 150 2, 298 7" fill="none" stroke="currentColor" stroke-width="4" stroke-linecap="round"/></svg>
+              </span><br>
+              You close the deals.
+            </h1>
+
+            <p class="hero-lead hero-in" style="--i:2">
+              We help B2B businesses build qualified sales pipelines through strategic cold email and LinkedIn outreach, powered by AI driven personalisation, lead qualification, and appointment setting.
+            </p>
+
+            <div class="hero-in d-flex flex-wrap gap-3 align-items-center" style="--i:3">
+              <a href="#contact" class="btn btn-sr btn-lg px-4"><i class="bi bi-calendar-check me-2"></i>Book a Free Consultation</a>
+              <a href="#process" class="btn btn-ghost btn-lg px-4"><i class="bi bi-play-circle me-2"></i>See how it works</a>
+            </div>
+
+            <ul class="trust-row hero-in list-unstyled" style="--i:4">
+              <li><i class="bi bi-tag"></i> Affordable Pricing</li>
+              <li><i class="bi bi-patch-check"></i> Proven Results</li>
+              <li><i class="bi bi-file-earmark-x"></i> No Long-Term Contract</li>
+            </ul>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="hero-visual hero-in" style="--i:2" id="heroVisual">
+              <div class="dash-card" data-depth="6">
+                <div class="dash-bar"><span></span><span></span><span></span><em>app.syncreach.ai/campaigns</em></div>
+                <div class="dash-body">
+                  <div class="dash-head">
+                    <div>
+                      <h6>We Help Businesses Grow, Digitally</h6>
+                      <p>Live campaign overview &middot; last 7 days</p>
+                    </div>
+                    <span class="live-pill"><i></i> Live</span>
+                  </div>
+
+                  <div class="row g-2 mb-3">
+                    <div class="col-4"><div class="kpi"><small>Emails sent</small><strong data-count="12480" data-suffix="">0</strong></div></div>
+                    <div class="col-4"><div class="kpi"><small>Reply rate</small><strong data-count="7.4" data-decimals="1" data-suffix="%">0</strong></div></div>
+                    <div class="col-4"><div class="kpi"><small>Meetings</small><strong data-count="38" data-suffix="">0</strong></div></div>
+                  </div>
+
+                  <div class="dash-chart" aria-hidden="true">
+                    <span style="--h:38%"></span><span style="--h:52%"></span><span style="--h:44%"></span>
+                    <span style="--h:66%"></span><span style="--h:58%"></span><span style="--h:78%"></span>
+                    <span style="--h:72%"></span><span style="--h:92%"></span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="float-chip chip-1" data-depth="16">
+                <i class="bi bi-reply-fill"></i>
+                <div><strong>New positive reply</strong><small>VP Sales &middot; Northwind</small></div>
+              </div>
+              <div class="float-chip chip-2" data-depth="-14">
+                <i class="bi bi-calendar2-check-fill"></i>
+                <div><strong>Meeting booked</strong><small>Thu, 3:00 PM</small></div>
+              </div>
+              <div class="float-chip chip-3" data-depth="10">
+                <i class="bi bi-graph-up-arrow"></i>
+                <div><strong>+24%</strong><small>reply rate</small></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== STATS STRIP ===================== -->
+    <!-- NOTE: replace these placeholder numbers with your real figures -->
+    <section class="stats-strip">
+      <div class="container">
+        <div class="stats-wrap reveal">
+          <div class="stat"><strong data-count="2.4" data-decimals="1" data-suffix="M+">0</strong><span>Emails sent</span></div>
+          <div class="stat"><strong data-count="7.8" data-decimals="1" data-suffix="%">0</strong><span>Average reply rate</span></div>
+          <div class="stat"><strong data-count="350" data-suffix="+">0</strong><span>Meetings booked</span></div>
+          <div class="stat"><strong data-count="98" data-suffix="%">0</strong><span>Inbox placement</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FEATURES ===================== -->
+    <section class="section-pad" id="features">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> Why SyncReach</span>
+          <h2>Everything you need to fill <span class="grad-text">your pipeline in one place.</span></h2>
+          <p>Stop stitching together 6 tools. SyncReach is your all in one outbound engine.</p>
+        </div>
+
+        <div class="row g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+          <div class="col reveal" style="--d:.0s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-bullseye"></i></span><span class="step-tag">Step 1</span></div>
+              <h3>ICP Research &amp; Offer Strategy</h3>
+              <p>We identify your ideal customers, research competitors, and craft compelling offers with clear messaging that drives qualified conversations from day one.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col reveal" style="--d:.08s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-people"></i></span><span class="step-tag">Step 2</span></div>
+              <h3>Targeted List Building &amp; AI Personalization</h3>
+              <p>We build verified prospect lists, enrich data with AI, and personalize every message based on each company's signals, needs, and fit.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col reveal" style="--d:.16s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-send"></i></span><span class="step-tag">Step 3</span></div>
+              <h3>Outreach Infrastructure &amp; Campaign Launch</h3>
+              <p>We configure secure email infrastructure, then launch personalized multi-step Email and LinkedIn campaigns that consistently reach decision-makers.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col reveal" style="--d:.0s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-sliders"></i></span><span class="step-tag">Step 4</span></div>
+              <h3>Testing &amp; Performance Optimization</h3>
+              <p>We continuously test ICPs, offers, subject lines, copy, CTAs, and channels to improve reply rates, meetings, and overall campaign quality.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col reveal" style="--d:.08s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-chat-dots"></i></span><span class="step-tag">Step 5</span></div>
+              <h3>Reply Management &amp; CRM Automation</h3>
+              <p>We manage replies, nurture prospects, automate follow-ups, integrate with your CRM, and ensure every qualified opportunity receives timely attention.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+          <div class="col reveal" style="--d:.16s">
+            <article class="feature-card spot h-100">
+              <div class="fc-top"><span class="fc-icon"><i class="bi bi-calendar-check"></i></span><span class="step-tag">Step 6</span></div>
+              <h3>Qualified Appointment Booking</h3>
+              <p>Our focus is simple: fill your calendar with qualified decision-makers who match your ICP and are genuinely interested in your solution.</p>
+              <a href="#process" class="fc-link">How it works <i class="bi bi-arrow-right"></i></a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== HOW IT WORKS ===================== -->
+    <section class="section-pad section-soft" id="process">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> How it works</span>
+          <h2>From cold list to booked call <span class="grad-text">in 3 simple steps.</span></h2>
+          <p>A simple operating rhythm, no cluttered dashboards, no tool hopping.</p>
+        </div>
+
+        <div class="row g-4 steps-row">
+          <div class="col-lg-4 reveal" style="--d:0s">
+            <article class="step-card h-100">
+              <div class="step-top"><span class="step-num">01</span><span class="step-label">Targeting</span></div>
+              <h3>Sync your ICP</h3>
+              <p>Tell us who you sell to. We build a bookable list of verified decision-makers.</p>
+
+              <div class="step-viz viz-target" aria-hidden="true">
+                <span class="ring r1"></span><span class="ring r2"></span><span class="ring r3"></span>
+                <span class="core"><i class="bi bi-person-fill"></i></span>
+                <span class="node n1"></span><span class="node n2"></span><span class="node n3"></span><span class="node n4"></span>
+              </div>
+
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> Verified decision-makers</li>
+                <li><i class="bi bi-check-circle-fill"></i> Smart filters &amp; lookalikes</li>
+                <li><i class="bi bi-check-circle-fill"></i> Always up-to-date</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-4 reveal" style="--d:.1s">
+            <article class="step-card h-100">
+              <div class="step-top"><span class="step-num">02</span><span class="step-label">Execution</span></div>
+              <h3>Launch outreach sequences</h3>
+              <p>We write, personalize, and send from warmed-up inboxes. No spam, all inbox.</p>
+
+              <div class="step-viz viz-mail" aria-hidden="true">
+                <i class="bi bi-envelope-paper-fill main"></i>
+                <i class="bi bi-envelope-fill m1"></i>
+                <i class="bi bi-envelope-fill m2"></i>
+                <i class="bi bi-envelope-fill m3"></i>
+              </div>
+
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> Personalized at scale</li>
+                <li><i class="bi bi-check-circle-fill"></i> Warmed-up inboxes</li>
+                <li><i class="bi bi-check-circle-fill"></i> Deliverability built-in</li>
+              </ul>
+            </article>
+          </div>
+
+          <div class="col-lg-4 reveal" style="--d:.2s">
+            <article class="step-card h-100">
+              <div class="step-top"><span class="step-num">03</span><span class="step-label">Meetings</span></div>
+              <h3>Reach booked meetings</h3>
+              <p>Positive replies flow straight into your calendar. Your reps just close.</p>
+
+              <div class="step-viz viz-cal" aria-hidden="true">
+                <i class="bi bi-calendar-check-fill main"></i>
+                <span class="tick"><i class="bi bi-check-lg"></i></span>
+              </div>
+
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> Replies to meetings</li>
+                <li><i class="bi bi-check-circle-fill"></i> Calendar integration</li>
+                <li><i class="bi bi-check-circle-fill"></i> More meetings, less work</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== REVIEWS ===================== -->
+    <section class="section-pad" id="reviews">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> Loved by outbound teams</span>
+          <h2>Trusted by B2B founders. <span class="grad-text">Real clients. Real results.</span></h2>
+          <p>Hear directly from founders growing through outbound.</p>
+        </div>
+
+        <div class="review-masonry">
+
+          <article class="review-card reveal" style="--d:0s">
+            <header>
+              <span class="avatar av-1">SW</span>
+              <div><strong>Smith Walker</strong><small>@smithwal</small></div>
+              <span class="type-tag">Text</span>
+            </header>
+            <div class="stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"These guys have changed the game for us when it comes to cold email. Their support is incredible, responsive and always one step ahead."</p>
+          </article>
+
+          <article class="review-card review-video reveal" style="--d:.06s" data-video="" data-name="Aron">
+            <button type="button" class="video-thumb v-a" aria-label="Play video review from Aron">
+              <span class="play"><i class="bi bi-play-fill"></i></span>
+            </button>
+            <header>
+              <span class="avatar av-2">AR</span>
+              <div><strong>Aron</strong><small>@aron</small></div>
+              <span class="type-tag">Video</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"Please watch the video."</p>
+          </article>
+
+          <article class="review-card reveal" style="--d:.12s">
+            <header>
+              <span class="avatar av-3">NF</span>
+              <div><strong>Norman farrar</strong><small>@normanfarrar</small></div>
+              <span class="type-tag">Text</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"The follow-up system alone generated conversations we would've missed. Great experience working with the team."</p>
+          </article>
+
+          <article class="review-card review-video reveal" style="--d:.18s" data-video="" data-name="Andry">
+            <button type="button" class="video-thumb v-b" aria-label="Play video review from Andry">
+              <span class="play"><i class="bi bi-play-fill"></i></span>
+            </button>
+            <header>
+              <span class="avatar av-4">AN</span>
+              <div><strong>Andry</strong><small>@andry</small></div>
+              <span class="type-tag">Video</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"Please watch the video."</p>
+          </article>
+
+          <article class="review-card reveal" style="--d:.0s">
+            <header>
+              <span class="avatar av-5">JC</span>
+              <div><strong>James Carter</strong><small>@jamesc</small></div>
+              <span class="type-tag">Text</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"Clear weekly reporting and a steady flow of qualified meetings. Exactly what we were looking for."</p>
+          </article>
+
+          <article class="review-card review-video reveal" style="--d:.06s" data-video="" data-name="Joshua Craig">
+            <button type="button" class="video-thumb v-c" aria-label="Play video review from Joshua Craig">
+              <span class="play"><i class="bi bi-play-fill"></i></span>
+            </button>
+            <header>
+              <span class="avatar av-6">JC</span>
+              <div><strong>Joshua Craig</strong><small>@joshcraig</small></div>
+              <span class="type-tag">Video</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"Please watch the video."</p>
+          </article>
+
+          <article class="review-card reveal" style="--d:.12s">
+            <header>
+              <span class="avatar av-7">CA</span>
+              <div><strong>Chris Anderson</strong><small>@chrisanderson</small></div>
+              <span class="type-tag">Text</span>
+            </header>
+            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
+            <p>"SyncReach handles all aspects of email infrastructure setup, from DNS records to email account import and warm-up."</p>
+          </article>
+
+        </div>
+
+        <div class="text-center mt-5 reveal">
+          <a href="#contact" class="btn btn-sr px-4">Explore all reviews <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GALLERY ===================== -->
+    <section class="section-pad section-soft overflow-hidden" id="gallery">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> Campaigns</span>
+          <h2>Performance gallery. <span class="grad-text">Built on data. Driven by results.</span></h2>
+          <p>Recent campaign performance from real outbound systems.</p>
+        </div>
+      </div>
+
+      <div class="marquee reveal" aria-label="Campaign analytics screenshots">
+        <div class="marquee-track" id="marqueeA"></div>
+      </div>
+      <div class="marquee marquee-rev reveal mt-4">
+        <div class="marquee-track" id="marqueeB"></div>
+      </div>
+
+      <div class="text-center mt-5 reveal">
+        <a href="#contact" class="btn btn-sr px-4">Explore full gallery <i class="bi bi-arrow-right ms-2"></i></a>
+      </div>
+    </section>
+
+    <!-- ===================== PRICING ===================== -->
+    <section class="section-pad" id="pricing">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> Simple pricing</span>
+          <h2>Pick a plan. <span class="grad-text">Book meetings this week.</span></h2>
+        </div>
+
+        <div class="row g-4 align-items-stretch">
+          <!-- Plan 1 -->
+          <div class="col-lg-4 reveal" style="--d:0s">
+            <article class="price-card spot h-100">
+              <span class="plan-badge">Popular</span>
+              <h3 class="plan-name">Done for you email campaign</h3>
+              <div class="plan-price"><strong>$150</strong><span>for 10k emails</span></div>
+              <div class="plan-note"><i class="bi bi-info-circle"></i> Sending lists and setup included<br><small>Domains, warm up time come from you</small></div>
+              <a href="#contact" class="btn btn-sr w-100 py-2">Start with Starter <i class="bi bi-arrow-right ms-1"></i></a>
+              <h4 class="inc-title">What's included</h4>
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> 10,000 emails to start</li>
+                <li><i class="bi bi-check-circle-fill"></i> Suggested first test: 20,000 emails</li>
+                <li><i class="bi bi-check-circle-fill"></i> Personalised copy and follow-ups</li>
+                <li><i class="bi bi-check-circle-fill"></i> ICP and intent research</li>
+                <li><i class="bi bi-check-circle-fill"></i> Safe sending and reply handling</li>
+                <li><i class="bi bi-check-circle-fill"></i> A/B testing and regular improvements</li>
+                <li><i class="bi bi-check-circle-fill"></i> Monthly campaign management included</li>
+                <li><i class="bi bi-check-circle-fill"></i> Live reports in your client portal</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Plan 2 -->
+          <div class="col-lg-4 reveal" style="--d:.1s">
+            <article class="price-card price-featured spot h-100">
+              <span class="plan-badge">Next popular</span>
+              <h3 class="plan-name">All infrastructure from you</h3>
+              <div class="plan-price"><strong>$300</strong><span>one-time setup fee</span></div>
+              <div class="plan-note"><i class="bi bi-info-circle"></i> Infrastructure comes from you<br><small>$50 per month management, cancel anytime</small></div>
+              <a href="#contact" class="btn btn-sr w-100 py-2">Choose Growth <i class="bi bi-arrow-right ms-1"></i></a>
+              <h4 class="inc-title">What's included</h4>
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> You choose how many emails go out each month</li>
+                <li><i class="bi bi-check-circle-fill"></i> Personalised copy and follow-ups</li>
+                <li><i class="bi bi-check-circle-fill"></i> ICP and intent research</li>
+                <li><i class="bi bi-check-circle-fill"></i> Safe sending and reply handling</li>
+                <li><i class="bi bi-check-circle-fill"></i> A/B testing and continuous optimisation</li>
+                <li><i class="bi bi-check-circle-fill"></i> Monthly campaign management, $50 per month</li>
+                <li><i class="bi bi-check-circle-fill"></i> Live reports in your client portal</li>
+              </ul>
+            </article>
+          </div>
+
+          <!-- Plan 3 -->
+          <div class="col-lg-4 reveal" style="--d:.2s">
+            <article class="price-card spot h-100">
+              <span class="plan-badge">Custom</span>
+              <h3 class="plan-name">Custom</h3>
+              <div class="plan-price"><strong class="fs-custom">Custom</strong></div>
+              <div class="plan-note"><i class="bi bi-info-circle"></i> Based on your scope &amp; volume<br><small>Flexible terms &middot; Dedicated account director</small></div>
+              <a href="#contact" class="btn btn-sr w-100 py-2">Talk to Us <i class="bi bi-arrow-right ms-1"></i></a>
+              <h4 class="inc-title">What's included</h4>
+              <ul class="check-list">
+                <li><i class="bi bi-check-circle-fill"></i> We book qualified meetings for you ($20 each)</li>
+                <li><i class="bi bi-check-circle-fill"></i> We handle the sales call and closing</li>
+                <li><i class="bi bi-check-circle-fill"></i> Flexible email volume</li>
+                <li><i class="bi bi-check-circle-fill"></i> Email and LinkedIn outreach</li>
+                <li><i class="bi bi-check-circle-fill"></i> AI lead qualification</li>
+                <li><i class="bi bi-check-circle-fill"></i> Priority strategy calls</li>
+                <li><i class="bi bi-check-circle-fill"></i> And more, planned around your business</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="section-pad section-soft" id="team">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> The team</span>
+          <h2>Built by outbound operators, <span class="grad-text">for outbound teams.</span></h2>
+        </div>
+
+        <!-- To use real photos: replace <span class="team-photo ...">XX</span> with <img class="team-photo" src="photo.jpg" alt="Name"> -->
+        <div class="row g-4 justify-content-center">
+          <div class="col-6 col-lg-4 reveal" style="--d:0s">
+            <article class="team-card">
+              <span class="team-photo tp-1">SB</span>
+              <h3>Shihab Bukhari</h3><p>Mentor &amp; Advisor</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-4 reveal" style="--d:.08s">
+            <article class="team-card">
+              <span class="team-photo tp-2">SF</span>
+              <h3>Safiq</h3><p>CEO</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-4 reveal" style="--d:.16s">
+            <article class="team-card">
+              <span class="team-photo tp-3">SK</span>
+              <h3>Sabid Khan</h3><p>CTO</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-4 reveal" style="--d:0s">
+            <article class="team-card">
+              <span class="team-photo tp-4">MB</span>
+              <h3>Muhibbullah (Cairo, Egypt)</h3><p>MERN Stack Web Developer</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-4 reveal" style="--d:.08s">
+            <article class="team-card">
+              <span class="team-photo tp-5">AA</span>
+              <h3>Arifa akter</h3><p>Client Success Manager</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+          <div class="col-6 col-lg-4 reveal" style="--d:.16s">
+            <article class="team-card">
+              <span class="team-photo tp-6">MH</span>
+              <h3>Mahmud Al Hasan</h3><p>ICP &amp; Leadgens Specialist</p>
+              <div class="socials"><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="section-pad" id="contact">
+      <div class="container">
+        <div class="row g-5 align-items-center">
+          <div class="col-lg-5 reveal">
+            <span class="eyebrow"><i class="dot"></i> Get in touch</span>
+            <h2 class="contact-title">Ready to fill <span class="grad-text">your pipeline?</span></h2>
+            <p class="text-muted mb-4">Send a message and our team will get back within 24 hours.</p>
+
+            <a class="contact-item" href="mailto:Safiq@sync-reachai.com">
+              <span class="ci-icon"><i class="bi bi-envelope"></i></span>
+              <span><small>Email us</small><strong>Safiq@sync-reachai.com</strong></span>
+            </a>
+            <a class="contact-item" href="tel:+8801315121758">
+              <span class="ci-icon"><i class="bi bi-telephone"></i></span>
+              <span><small>Call us</small><strong>+880 1315 121758</strong></span>
+            </a>
+            <div class="contact-item">
+              <span class="ci-icon"><i class="bi bi-geo-alt"></i></span>
+              <span><small>Visit us</small><strong>Faridpur, Dhaka, Bangladesh</strong></span>
+            </div>
+          </div>
+
+          <div class="col-lg-7 reveal" style="--d:.1s">
+            <form class="contact-form needs-validation" id="contactForm" novalidate>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <label for="cName" class="form-label">Name</label>
+                  <input type="text" class="form-control" id="cName" placeholder="Your name" required>
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-md-6">
+                  <label for="cEmail" class="form-label">Email</label>
+                  <input type="email" class="form-control" id="cEmail" placeholder="you@company.com" required>
+                  <div class="invalid-feedback">Please enter a valid email.</div>
+                </div>
+                <div class="col-12">
+                  <label for="cCompany" class="form-label">Company</label>
+                  <input type="text" class="form-control" id="cCompany" placeholder="Company name">
+                </div>
+                <div class="col-12">
+                  <label for="cMsg" class="form-label">Message</label>
+                  <textarea class="form-control" id="cMsg" rows="5" placeholder="Tell us about your outreach goals..." required></textarea>
+                  <div class="invalid-feedback">Tell us a little about your goals.</div>
+                </div>
+                <div class="col-12">
+                  <button type="submit" class="btn btn-sr w-100 py-3" id="sendBtn"><span>Send message</span> <i class="bi bi-arrow-right ms-1"></i></button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== FAQ ===================== -->
+    <section class="section-pad section-soft" id="faq">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow"><i class="dot"></i> FAQ</span>
+          <h2>Answers before <span class="grad-text">you ask.</span></h2>
+          <p>Everything you need to know about working with SyncReach.</p>
+        </div>
+
+        <div class="row g-4 align-items-start">
+          <div class="col-lg-3 reveal">
+            <div class="faq-aside">
+              <span class="faq-q">?</span>
+              <h3>Still have questions?</h3>
+              <p>Our team is here to help you find the right solution.</p>
+              <a href="#contact" class="btn btn-sr w-100"><i class="bi bi-headset me-2"></i>Book a Free Consultation</a>
+            </div>
+          </div>
+
+          <div class="col-lg-9 reveal" style="--d:.1s">
+            <div class="accordion sr-accordion" id="faqAcc">
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f1" aria-expanded="false">Do you offer guaranteed results?</button></h3>
+                <div id="f1" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">No honest agency can guarantee replies or revenue, because results depend on your offer and market. What we do commit to is a clear process: verified lists, safe sending, weekly testing and transparent live reporting so you always see what's working.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f2" aria-expanded="false">What results can I expect from your campaigns?</button></h3>
+                <div id="f2" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Results vary by industry, offer and list quality. Before launch we share benchmarks for your market, then track replies, positive replies and booked meetings in your client portal.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f3" aria-expanded="false">How long does it take to see the results?</button></h3>
+                <div id="f3" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Setup and inbox warm-up usually take two to three weeks. After launch, first replies typically arrive within days, and we optimise the campaign every week from there.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f4" aria-expanded="false">What domains and email accounts will you use?</button></h3>
+                <div id="f4" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Depending on your plan, we either set up fresh secondary domains and inboxes for you, or configure the ones you provide, including SPF, DKIM, DMARC and warm-up.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f5" aria-expanded="false">Do I need to sign a long-term contract?</button></h3>
+                <div id="f5" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">No. Plans run month to month and you can cancel anytime.</div></div>
+              </div>
+              <div class="accordion-item">
+                <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#f6" aria-expanded="false">Do you run LinkedIn outreach as well?</button></h3>
+                <div id="f6" class="accordion-collapse collapse" data-bs-parent="#faqAcc"><div class="accordion-body">Yes. On the Custom plan we coordinate email and LinkedIn sequences so prospects hear from you on both channels.</div></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== CTA BAND ===================== -->
+    <section class="cta-band">
+      <div class="container">
+        <div class="cta-inner reveal">
+          <div>
+            <h2>Your next 10 meetings are one conversation away.</h2>
+            <p>Book a free consultation and get an outbound plan built around your ICP.</p>
+          </div>
+          <a href="#contact" class="btn btn-light btn-lg px-4 fw-semibold">Book a Free Consultation <i class="bi bi-arrow-right ms-2"></i></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="sr-footer">
+    <div class="container">
+      <div class="d-flex flex-column flex-md-row justify-content-between align-items-center gap-3">
+        <a class="sr-brand" href="#top">
+          <svg width="28" height="28" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="#2563eb"/><path d="M22 8.5H13.5a4 4 0 0 0 0 8h5a4 4 0 0 1 0 8H10" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>SyncReach</span>
+        </a>
+        <ul class="list-inline m-0 footer-links">
+          <li class="list-inline-item"><a href="#features">Features</a></li>
+          <li class="list-inline-item"><a href="#pricing">Pricing</a></li>
+          <li class="list-inline-item"><a href="#faq">FAQ</a></li>
+          <li class="list-inline-item"><a href="#contact">Contact</a></li>
+        </ul>
+        <small class="text-muted">&copy; <span id="year"></span> SyncReach. All rights reserved.</small>
+      </div>
+    </div>
+  </footer>
+
+  <!-- WhatsApp floating button -->
+  <a href="https://wa.me/8801315121758" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+
+  <!-- Back to top -->
+  <button type="button" class="to-top" id="toTop" aria-label="Back to top"><i class="bi bi-arrow-up"></i></button>
+
+  <!-- Video modal -->
+  <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="videoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+      <div class="modal-content border-0 rounded-4 overflow-hidden">
+        <div class="modal-header border-0 pb-0">
+          <h5 class="modal-title" id="videoModalLabel">Client review</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="ratio ratio-16x9 bg-light rounded-3 overflow-hidden" id="videoBox"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
