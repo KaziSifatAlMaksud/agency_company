@@ -125,6 +125,165 @@
     });
   });
 
+  /* =========================================================
+     REVIEWS WALL – columns scroll up / down / up / down
+     ========================================================= */
+  function initReviews() {
+    const wall = $('#reviewWall');
+    const colsEl = $('#reviewCols');
+    if (!wall || !colsEl) return;
+
+    /* ---------------------------------------------------------
+       YOUR REVIEWS – edit / add / remove freely (aim for 8+)
+       type:   'text' | 'image' | 'video'
+       img:    (image cards)  path to a screenshot, e.g. 'img/review-1.jpg'
+       thumb:  (video cards)  optional poster image for the video
+       video:  (video cards)  YouTube / Vimeo EMBED url, e.g.
+               'https://www.youtube.com/embed/XXXXXXXX'
+       avatar: optional profile photo, otherwise initials are shown
+       Tip: keep text and video cards alternating for a nice rhythm.
+       --------------------------------------------------------- */
+    const REVIEWS = [
+      { type: 'text',  name: 'Smith Walker',   handle: '@smithwal',      text: 'These guys have changed the game for us when it comes to cold email. Their support is incredible, responsive and always one step ahead.' },
+      { type: 'video', name: 'Aron',           handle: '@aron',          text: 'Please watch the video.', video: '', thumb: '' },
+      { type: 'text',  name: 'Norman farrar',  handle: '@normanfarrar',  text: 'The follow-up system alone generated conversations we would\u2019ve missed. Great experience working with the team.' },
+      { type: 'video', name: 'Andry',          handle: '@andry',         text: 'Please watch the video.', video: '', thumb: '' },
+      { type: 'text',  name: 'James Carter',   handle: '@jamesc',        text: 'Clear weekly reporting and a steady flow of qualified meetings. Exactly what we were looking for.' },
+      { type: 'video', name: 'Joshua Craig',   handle: '@joshcraig',     text: 'Please watch the video.', video: '', thumb: '' },
+      { type: 'text',  name: 'Chris Anderson', handle: '@chrisanderson', text: 'SyncReach handles all aspects of email infrastructure setup, from DNS records to email account import and warm-up.' },
+      { type: 'video', name: 'Sofia',          handle: '@sofia',         text: 'Please watch the video.', video: '', thumb: '' }
+    ];
+
+    /* ---------- helpers ---------- */
+    const esc = (s) => String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+    const initials = (n) => n.trim().split(/\s+/).map((w) => w[0]).join('').slice(0, 2).toUpperCase();
+    const STARS = '<div class="stars" aria-label="5 out of 5 stars">' + '<i class="bi bi-star-fill"></i>'.repeat(5) + '</div>';
+    const TAGS = {
+      text:  ['bi-fonts', 'Text'],
+      image: ['bi-image', 'Image'],
+      video: ['bi-camera-video', 'Video']
+    };
+
+    function cardHTML(r, i, clone) {
+      const type = TAGS[r.type] ? r.type : 'text';
+      const tab = clone ? ' tabindex="-1"' : '';
+      const tag = TAGS[type];
+
+      let media = '';
+      if (type === 'video') {
+        media =
+          '<button type="button" class="rv-media rv-video-btn t-' + (i % 3) + '"' + tab +
+          ' aria-label="Play video review from ' + esc(r.name) + '">' +
+          (r.thumb ? '<img src="' + esc(r.thumb) + '" alt="" loading="lazy">' : '') +
+          '<span class="rv-play"><i class="bi bi-play-fill"></i></span></button>';
+      } else if (type === 'image') {
+        media = r.img
+          ? '<div class="rv-media"><img src="' + esc(r.img) + '" alt="Review from ' + esc(r.name) + '" loading="lazy"></div>'
+          : '<div class="rv-media rv-ph" aria-hidden="true"><i class="bi bi-image"></i></div>';
+      }
+
+      const avatar = r.avatar
+        ? '<img class="avatar" src="' + esc(r.avatar) + '" alt="" loading="lazy">'
+        : '<span class="avatar av-' + ((i % 7) + 1) + '" aria-hidden="true">' + esc(initials(r.name)) + '</span>';
+
+      return (
+        '<article class="rv-card" data-name="' + esc(r.name) + '" data-video="' + esc(r.video || '') + '">' +
+          '<header class="rv-head">' + avatar +
+            '<div class="rv-who"><strong>' + esc(r.name) + '</strong><small>' + esc(r.handle) + '</small></div>' +
+            '<span class="type-tag"><i class="bi ' + tag[0] + '"></i>' + tag[1] + '</span>' +
+          '</header>' +
+          media +
+          '<p class="rv-text">\u201C' + esc(r.text) + '\u201D</p>' +
+          STARS +
+        '</article>'
+      );
+    }
+
+    /* ---------- build columns (4 / 3 / 2 / 1 depending on screen width) ---------- */
+    const columnCount = () => {
+      const w = window.innerWidth;
+      return w >= 992 ? 4 : w >= 768 ? 3 : w >= 576 ? 2 : 1;
+    };
+
+    let current = 0;
+    function build() {
+      const cols = columnCount();
+      if (cols === current) return;
+      current = cols;
+      wall.style.setProperty('--rv-cols', cols);
+
+      const len = REVIEWS.length;
+      // each column starts on a different review, so neighbours never match
+      const per = Math.min(len, Math.max(3, Math.ceil(len / cols) + 1));
+      let html = '';
+
+      for (let c = 0; c < cols; c++) {
+        const start = Math.round((c * len) / cols);
+        let set = '', clone = '';
+        for (let k = 0; k < per; k++) {
+          const idx = (start + k) % len;
+          set += cardHTML(REVIEWS[idx], idx, false);
+          clone += cardHTML(REVIEWS[idx], idx, true);
+        }
+        html +=
+          '<div class="rv-col"><div class="rv-track">' +
+            '<div class="rv-set">' + set + '</div>' +
+            '<div class="rv-set" aria-hidden="true">' + clone + '</div>' +   // duplicate = seamless loop
+          '</div></div>';
+      }
+      colsEl.innerHTML = html;
+    }
+    build();
+
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(build, 150);
+    });
+
+    /* ---------- pause animation while the wall is off-screen ---------- */
+    new IntersectionObserver((entries) => {
+      wall.classList.toggle('is-off', !entries[0].isIntersecting);
+    }, { threshold: 0 }).observe(wall);
+
+    /* ---------- video modal (event delegation, keeps working after rebuilds) ---------- */
+    const modalEl = $('#videoModal');
+    const box = $('#videoBox');
+    const title = $('#videoModalLabel');
+
+    if (modalEl) {
+      // clear the player on close, which also stops playback
+      modalEl.addEventListener('hidden.bs.modal', () => { box.innerHTML = ''; });
+    }
+
+    colsEl.addEventListener('click', (e) => {
+      const btn = e.target.closest('.rv-video-btn');
+      if (!btn || !modalEl) return;
+
+      const card = btn.closest('.rv-card');
+      const url = (card.dataset.video || '').trim();
+      title.textContent = card.dataset.name + ' \u2013 client review';
+      box.textContent = '';
+
+      if (/^https:\/\//i.test(url)) {
+        const frame = document.createElement('iframe');
+        frame.src = url;
+        frame.title = 'Client video review';
+        frame.allow = 'autoplay; encrypted-media; picture-in-picture';
+        frame.allowFullscreen = true;
+        box.appendChild(frame);
+      } else {
+        box.innerHTML =
+          '<div class="d-grid text-center text-muted p-4" style="place-content:center">' +
+          '<i class="bi bi-camera-video fs-1 mb-2"></i>' +
+          '<small>Add your video embed link in the <code>video</code> field of this review in <code>main.js</code>.</small></div>';
+      }
+      bootstrap.Modal.getOrCreateInstance(modalEl).show();
+    });
+  }
+  initReviews();
+
   /* ---------- Performance gallery (generated analytics cards) ---------- */
   function seeded(seed) {
     let s = seed;
@@ -182,26 +341,6 @@
   }
   buildRow($('#marqueeA'), 0);
   buildRow($('#marqueeB'), 2);
-
-  /* ---------- Video review modal ---------- */
-  const modalEl = $('#videoModal');
-  if (modalEl) {
-    const modal = new bootstrap.Modal(modalEl);
-    const box = $('#videoBox');
-    const title = $('#videoModalLabel');
-
-    $$('.review-video').forEach((card) => {
-      $('.video-thumb', card).addEventListener('click', () => {
-        const url = (card.dataset.video || '').trim();      // put a YouTube/Vimeo EMBED url in data-video=""
-        title.textContent = card.dataset.name + ' – client review';
-        box.innerHTML = url
-          ? '<iframe src="' + url + '" title="Client video review" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>'
-          : '<div class="d-grid place-items-center text-center text-muted p-4" style="place-content:center"><i class="bi bi-camera-video fs-1 mb-2"></i><small>Add your video embed link in the <code>data-video</code> attribute of this review card.</small></div>';
-        modal.show();
-      });
-    });
-    modalEl.addEventListener('hidden.bs.modal', () => { box.innerHTML = ''; });   // stops playback
-  }
 
   /* ---------- Contact form (validation + demo submit) ---------- */
   const form = $('#contactForm');

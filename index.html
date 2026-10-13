@@ -290,7 +290,7 @@
       </div>
     </section>
 
-    <!-- ===================== REVIEWS ===================== -->
+    <!-- ===================== REVIEWS (animated up / down wall) ===================== -->
     <section class="section-pad" id="reviews">
       <div class="container">
         <div class="section-head reveal">
@@ -299,87 +299,9 @@
           <p>Hear directly from founders growing through outbound.</p>
         </div>
 
-        <div class="review-masonry">
-
-          <article class="review-card reveal" style="--d:0s">
-            <header>
-              <span class="avatar av-1">SW</span>
-              <div><strong>Smith Walker</strong><small>@smithwal</small></div>
-              <span class="type-tag">Text</span>
-            </header>
-            <div class="stars" aria-label="5 out of 5 stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"These guys have changed the game for us when it comes to cold email. Their support is incredible, responsive and always one step ahead."</p>
-          </article>
-
-          <article class="review-card review-video reveal" style="--d:.06s" data-video="" data-name="Aron">
-            <button type="button" class="video-thumb v-a" aria-label="Play video review from Aron">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </button>
-            <header>
-              <span class="avatar av-2">AR</span>
-              <div><strong>Aron</strong><small>@aron</small></div>
-              <span class="type-tag">Video</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Please watch the video."</p>
-          </article>
-
-          <article class="review-card reveal" style="--d:.12s">
-            <header>
-              <span class="avatar av-3">NF</span>
-              <div><strong>Norman farrar</strong><small>@normanfarrar</small></div>
-              <span class="type-tag">Text</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"The follow-up system alone generated conversations we would've missed. Great experience working with the team."</p>
-          </article>
-
-          <article class="review-card review-video reveal" style="--d:.18s" data-video="" data-name="Andry">
-            <button type="button" class="video-thumb v-b" aria-label="Play video review from Andry">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </button>
-            <header>
-              <span class="avatar av-4">AN</span>
-              <div><strong>Andry</strong><small>@andry</small></div>
-              <span class="type-tag">Video</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Please watch the video."</p>
-          </article>
-
-          <article class="review-card reveal" style="--d:.0s">
-            <header>
-              <span class="avatar av-5">JC</span>
-              <div><strong>James Carter</strong><small>@jamesc</small></div>
-              <span class="type-tag">Text</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Clear weekly reporting and a steady flow of qualified meetings. Exactly what we were looking for."</p>
-          </article>
-
-          <article class="review-card review-video reveal" style="--d:.06s" data-video="" data-name="Joshua Craig">
-            <button type="button" class="video-thumb v-c" aria-label="Play video review from Joshua Craig">
-              <span class="play"><i class="bi bi-play-fill"></i></span>
-            </button>
-            <header>
-              <span class="avatar av-6">JC</span>
-              <div><strong>Joshua Craig</strong><small>@joshcraig</small></div>
-              <span class="type-tag">Video</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"Please watch the video."</p>
-          </article>
-
-          <article class="review-card reveal" style="--d:.12s">
-            <header>
-              <span class="avatar av-7">CA</span>
-              <div><strong>Chris Anderson</strong><small>@chrisanderson</small></div>
-              <span class="type-tag">Text</span>
-            </header>
-            <div class="stars"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div>
-            <p>"SyncReach handles all aspects of email infrastructure setup, from DNS records to email account import and warm-up."</p>
-          </article>
-
+        <!-- Cards are generated by main.js. Edit the REVIEWS array inside initReviews() -->
+        <div class="rv-wall reveal" id="reviewWall" role="region" aria-label="Client reviews">
+          <div class="rv-cols" id="reviewCols"></div>
         </div>
 
         <div class="text-center mt-5 reveal">
